@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="loop_pipeline.cpp" path="C:\dev\VitisHLSRepos\LoopPipeline\loop_pipeline.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="loop_pipeline_test.cpp" path="C:\dev\VitisHLSRepos\LoopPipeline\loop_pipeline_test.cpp"/>
+    <originFiles name="result.golden.dat" path="C:\dev\VitisHLSRepos\LoopPipeline\result.golden.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

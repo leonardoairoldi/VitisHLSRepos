@@ -1,0 +1,50 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "loop_pipeline",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "C:\/dev\/VitisHLSRepos\/LoopPipeline\/solution_pipeline_I\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "loop_pipeline"
+              }]
+          }
+        },
+        {
+          "functionName": "loop_pipeline",
+          "label": "LOOP_I",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/dev\/VitisHLSRepos\/LoopPipeline\/solution_pipeline_I\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "II",
+                "value": "1"
+              }]
+          }
+        },
+        {
+          "functionName": "loop_pipeline",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "C:\/dev\/VitisHLSRepos\/LoopPipeline\/solution_pipeline_I\/csynth.tcl",
+          "sourceLine": "15",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "loop_pipeline"
+              }]
+          }
+        }
+      ]
+    }]}

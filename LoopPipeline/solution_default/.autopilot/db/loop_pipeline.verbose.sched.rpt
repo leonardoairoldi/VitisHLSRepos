@@ -1,0 +1,221 @@
+
+
+================================================================
+== Vitis HLS Report for 'loop_pipeline'
+================================================================
+* Date:           Tue Mar 28 15:55:19 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        LoopPipeline
+* Solution:       solution_default (Vivado IP Flow Target)
+* Product family: artix7
+* Target device:  xc7a35t-cpg236-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.137 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      405|      405|  4.050 us|  4.050 us|  406|  406|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP_I_LOOP_J  |      403|      403|         5|          1|          1|   400|       yes|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 7 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 2 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.61>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%empty = alloca i32 1"   --->   Operation 8 'alloca' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%j = alloca i32 1"   --->   Operation 9 'alloca' 'j' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 10 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 11 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i20 0"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%spectopmodule_ln19 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [LoopPipeline/loop_pipeline.cpp:19]   --->   Operation 13 'spectopmodule' 'spectopmodule_ln19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %A, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %A"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%acc_V_load = load i20 %acc_V"   --->   Operation 16 'load' 'acc_V_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (1.61ns)   --->   "%store_ln24 = store i9 0, i9 %indvar_flatten" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 17 'store' 'store_ln24' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 18 [1/1] (1.61ns)   --->   "%store_ln24 = store i5 0, i5 %i" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 18 'store' 'store_ln24' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 19 [1/1] (1.61ns)   --->   "%store_ln24 = store i5 0, i5 %j" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 19 'store' 'store_ln24' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 20 [1/1] (1.61ns)   --->   "%store_ln24 = store i20 %acc_V_load, i20 %empty" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 20 'store' 'store_ln24' <Predicate = true> <Delay = 1.61>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln24 = br void %for.inc" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 21 'br' 'br_ln24' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.13>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i9 %indvar_flatten" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 22 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 23 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (1.58ns)   --->   "%icmp_ln24 = icmp_eq  i9 %indvar_flatten_load, i9 400" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 24 'icmp' 'icmp_ln24' <Predicate = true> <Delay = 1.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (2.11ns)   --->   "%add_ln24 = add i9 %indvar_flatten_load, i9 1" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 25 'add' 'add_ln24' <Predicate = true> <Delay = 2.11> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.11> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln24 = br i1 %icmp_ln24, void %for.inc4, void %for.end6" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 26 'br' 'br_ln24' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%j_load = load i5 %j" [LoopPipeline/loop_pipeline.cpp:25]   --->   Operation 27 'load' 'j_load' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.44ns)   --->   "%icmp_ln25 = icmp_eq  i5 %j_load, i5 20" [LoopPipeline/loop_pipeline.cpp:25]   --->   Operation 28 'icmp' 'icmp_ln25' <Predicate = (!icmp_ln24)> <Delay = 1.44> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (1.21ns)   --->   "%select_ln21 = select i1 %icmp_ln25, i5 0, i5 %j_load" [LoopPipeline/loop_pipeline.cpp:21]   --->   Operation 29 'select' 'select_ln21' <Predicate = (!icmp_ln24)> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%j_cast = zext i5 %select_ln21" [LoopPipeline/loop_pipeline.cpp:21]   --->   Operation 30 'zext' 'j_cast' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%A_addr = getelementptr i5 %A, i64 0, i64 %j_cast"   --->   Operation 31 'getelementptr' 'A_addr' <Predicate = (!icmp_ln24)> <Delay = 0.00>
+ST_2 : Operation 32 [2/2] (2.15ns)   --->   "%A_load = load i5 %A_addr"   --->   Operation 32 'load' 'A_load' <Predicate = (!icmp_ln24)> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 20> <RAM>
+ST_2 : Operation 33 [1/1] (1.86ns)   --->   "%add_ln25 = add i5 %select_ln21, i5 1" [LoopPipeline/loop_pipeline.cpp:25]   --->   Operation 33 'add' 'add_ln25' <Predicate = (!icmp_ln24)> <Delay = 1.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (1.61ns)   --->   "%store_ln25 = store i9 %add_ln24, i9 %indvar_flatten" [LoopPipeline/loop_pipeline.cpp:25]   --->   Operation 34 'store' 'store_ln25' <Predicate = (!icmp_ln24)> <Delay = 1.61>
+ST_2 : Operation 35 [1/1] (1.61ns)   --->   "%store_ln25 = store i5 %add_ln25, i5 %j" [LoopPipeline/loop_pipeline.cpp:25]   --->   Operation 35 'store' 'store_ln25' <Predicate = (!icmp_ln24)> <Delay = 1.61>
+
+State 3 <SV = 2> <Delay = 4.68>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%i_load = load i5 %i" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 36 'load' 'i_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (1.86ns)   --->   "%add_ln24_1 = add i5 %i_load, i5 1" [LoopPipeline/loop_pipeline.cpp:24]   --->   Operation 37 'add' 'add_ln24_1' <Predicate = (icmp_ln25)> <Delay = 1.86> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.86> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 38 [1/1] (1.21ns)   --->   "%select_ln21_1 = select i1 %icmp_ln25, i5 %add_ln24_1, i5 %i_load" [LoopPipeline/loop_pipeline.cpp:21]   --->   Operation 38 'select' 'select_ln21_1' <Predicate = true> <Delay = 1.21> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 1.21> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln21 = zext i5 %select_ln21_1" [LoopPipeline/loop_pipeline.cpp:21]   --->   Operation 39 'zext' 'zext_ln21' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/2] (2.15ns)   --->   "%A_load = load i5 %A_addr"   --->   Operation 40 'load' 'A_load' <Predicate = true> <Delay = 2.15> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 20> <RAM>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%sext_ln840 = sext i5 %A_load"   --->   Operation 41 'sext' 'sext_ln840' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 42 [3/3] (1.45ns) (grouped into DSP with root node add_ln840)   --->   "%mul_ln840 = mul i10 %zext_ln21, i10 %sext_ln840"   --->   Operation 42 'mul' 'mul_ln840' <Predicate = true> <Delay = 1.45> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 43 [1/1] (1.61ns)   --->   "%store_ln25 = store i5 %select_ln21_1, i5 %i" [LoopPipeline/loop_pipeline.cpp:25]   --->   Operation 43 'store' 'store_ln25' <Predicate = true> <Delay = 1.61>
+
+State 4 <SV = 3> <Delay = 1.45>
+ST_4 : Operation 44 [2/3] (1.45ns) (grouped into DSP with root node add_ln840)   --->   "%mul_ln840 = mul i10 %zext_ln21, i10 %sext_ln840"   --->   Operation 44 'mul' 'mul_ln840' <Predicate = true> <Delay = 1.45> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 2.10>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%p_load = load i20 %empty"   --->   Operation 45 'load' 'p_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 46 [1/3] (0.00ns) (grouped into DSP with root node add_ln840)   --->   "%mul_ln840 = mul i10 %zext_ln21, i10 %sext_ln840"   --->   Operation 46 'mul' 'mul_ln840' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 47 [1/1] (0.00ns) (grouped into DSP with root node add_ln840)   --->   "%sext_ln840_1 = sext i10 %mul_ln840"   --->   Operation 47 'sext' 'sext_ln840_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln840 = add i20 %sext_ln840_1, i20 %p_load"   --->   Operation 48 'add' 'add_ln840' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 3.71>
+ST_6 : Operation 49 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @LOOP_I_LOOP_J_str"   --->   Operation 49 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 50 [1/1] (0.00ns)   --->   "%empty_6 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 400, i64 400, i64 400"   --->   Operation 50 'speclooptripcount' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 51 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 51 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 52 [1/1] (0.00ns)   --->   "%specloopname_ln21 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [LoopPipeline/loop_pipeline.cpp:21]   --->   Operation 52 'specloopname' 'specloopname_ln21' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 53 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln840 = add i20 %sext_ln840_1, i20 %p_load"   --->   Operation 53 'add' 'add_ln840' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 54 [1/1] (1.61ns)   --->   "%store_ln25 = store i20 %add_ln840, i20 %empty" [LoopPipeline/loop_pipeline.cpp:25]   --->   Operation 54 'store' 'store_ln25' <Predicate = true> <Delay = 1.61>
+ST_6 : Operation 55 [1/1] (0.00ns)   --->   "%br_ln25 = br void %for.inc" [LoopPipeline/loop_pipeline.cpp:25]   --->   Operation 55 'br' 'br_ln25' <Predicate = true> <Delay = 0.00>
+
+State 7 <SV = 2> <Delay = 0.00>
+ST_7 : Operation 56 [1/1] (0.00ns)   --->   "%p_load5 = load i20 %empty" [LoopPipeline/loop_pipeline.cpp:30]   --->   Operation 56 'load' 'p_load5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 57 [1/1] (0.00ns)   --->   "%store_ln840 = store i20 %p_load5, i20 %acc_V"   --->   Operation 57 'store' 'store_ln840' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 58 [1/1] (0.00ns)   --->   "%ret_ln30 = ret i20 %p_load5" [LoopPipeline/loop_pipeline.cpp:30]   --->   Operation 58 'ret' 'ret_ln30' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.61ns
+The critical path consists of the following:
+	'alloca' operation ('indvar_flatten') [6]  (0 ns)
+	'store' operation ('store_ln24', LoopPipeline/loop_pipeline.cpp:24) of constant 0 on local variable 'indvar_flatten' [12]  (1.61 ns)
+
+ <State 2>: 6.14ns
+The critical path consists of the following:
+	'load' operation ('j_load', LoopPipeline/loop_pipeline.cpp:25) on local variable 'j' [25]  (0 ns)
+	'icmp' operation ('icmp_ln25', LoopPipeline/loop_pipeline.cpp:25) [29]  (1.45 ns)
+	'select' operation ('select_ln21', LoopPipeline/loop_pipeline.cpp:21) [30]  (1.22 ns)
+	'add' operation ('add_ln25', LoopPipeline/loop_pipeline.cpp:25) [43]  (1.86 ns)
+	'store' operation ('store_ln25', LoopPipeline/loop_pipeline.cpp:25) of variable 'add_ln25', LoopPipeline/loop_pipeline.cpp:25 on local variable 'j' [46]  (1.61 ns)
+
+ <State 3>: 4.69ns
+The critical path consists of the following:
+	'load' operation ('i_load', LoopPipeline/loop_pipeline.cpp:24) on local variable 'i' [26]  (0 ns)
+	'add' operation ('add_ln24_1', LoopPipeline/loop_pipeline.cpp:24) [31]  (1.86 ns)
+	'select' operation ('select_ln21_1', LoopPipeline/loop_pipeline.cpp:21) [32]  (1.22 ns)
+	'store' operation ('store_ln25', LoopPipeline/loop_pipeline.cpp:25) of variable 'select_ln21_1', LoopPipeline/loop_pipeline.cpp:21 on local variable 'i' [45]  (1.61 ns)
+
+ <State 4>: 1.45ns
+The critical path consists of the following:
+	'mul' operation of DSP[42] ('mul_ln840') [40]  (1.45 ns)
+
+ <State 5>: 2.1ns
+The critical path consists of the following:
+	'load' operation ('p_load') on local variable 'empty' [24]  (0 ns)
+	'add' operation of DSP[42] ('add_ln840') [42]  (2.1 ns)
+
+ <State 6>: 3.71ns
+The critical path consists of the following:
+	'add' operation of DSP[42] ('add_ln840') [42]  (2.1 ns)
+	'store' operation ('store_ln25', LoopPipeline/loop_pipeline.cpp:25) of variable 'add_ln840' on local variable 'empty' [47]  (1.61 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

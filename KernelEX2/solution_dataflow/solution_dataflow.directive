@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+  <sourceFile>
+    <directive functionName="krnl_helm" label="" functionLabel="">
+      <pragma name="TOP">
+        <option name="name" value="krnl_helm"/>
+      </pragma>
+    </directive>
+  </sourceFile>
+  <sourceFile name="KernelEX2/Krnl.cpp">
+    <directive functionName="kernel_body" label=" " functionLabel=" ">
+      <pragma name="DATAFLOW"/>
+    </directive>
+  </sourceFile>
+</AutoPilot:ProjectResources>

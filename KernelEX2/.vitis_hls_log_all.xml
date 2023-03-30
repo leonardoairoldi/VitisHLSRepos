@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:14.042+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_BREADY' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.852+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWUSER' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.832+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWREGION' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.812+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWQOS' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.782+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWPROT' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.762+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWCACHE' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.752+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWLOCK' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.722+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWBURST' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.712+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWSIZE' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.692+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWLEN' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.682+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWID' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.662+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWADDR' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.642+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_4/m_axi_gmem1_AWVALID' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:13.622+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARUSER' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.515+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARREGION' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.495+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARQOS' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.475+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARPROT' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.455+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARCACHE' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.445+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARLOCK' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.425+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARBURST' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.405+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARSIZE' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.385+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARLEN' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.375+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARID' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.355+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARADDR' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.345+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_3/m_axi_gmem0_ARVALID' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.325+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARUSER' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.064+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARREGION' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.036+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARQOS' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:11:00.026+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARPROT' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.990+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARCACHE' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.970+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARLOCK' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.960+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARBURST' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.940+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARSIZE' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.930+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARLEN' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.910+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARID' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.900+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARADDR' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.870+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_2/m_axi_gmem0_ARVALID' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.850+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_1/m_axi_gmem0_ARUSER' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.640+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_1/m_axi_gmem0_ARREGION' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.610+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_1/m_axi_gmem0_ARQOS' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.600+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_1/m_axi_gmem0_ARPROT' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.570+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_1/m_axi_gmem0_ARCACHE' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.550+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_1/m_axi_gmem0_ARLOCK' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.540+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_1/m_axi_gmem0_ARBURST' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.520+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_1/m_axi_gmem0_ARSIZE' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.500+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_1/m_axi_gmem0_ARLEN' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.490+0200" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'krnl_helm_Pipeline_1/m_axi_gmem0_ARID' to 0." projectName="KernelEX2" solutionName="solution_default" date="2023-03-30T10:10:59.470+0200" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

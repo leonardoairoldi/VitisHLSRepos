@@ -4,4 +4,13 @@
 *.log
 updategit.sh
 
+.settings
+.apc
+
+.autopilot
+.debug
+.tcls
+impl
+syn
+
 build*/
